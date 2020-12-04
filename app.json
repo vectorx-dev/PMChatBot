@@ -1,0 +1,31 @@
+{
+  "name": "PM Chat Bot",
+  "description": "Livegram clone",
+  "keywords": [
+    "telegram",
+    "bot",
+    "php"
+  ],
+  "repository": "https://github.com/vectorx-dev/PMChatBot",
+  "logo": "https://telegra.ph/file/b2575cd4886e062c172f4.png",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Enter Your Bot Token Id, Generated From @Botfather",
+      "required": true
+    },
+    "DB_TUR": {
+      "description": "db or json",
+      "value": "db",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Enter Your Telegram Id.",
+      "required": true
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ]
+}
