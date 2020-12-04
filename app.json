@@ -7,7 +7,7 @@
     "php"
   ],
   "repository": "https://github.com/vectorx-dev/PMChatBot",
-  "logo": "https://telegra.ph/file/b2575cd4886e062c172f4.png",
+  "logo": "https://telegra.ph/file/46b333ff3368591dd4b4d.jpg",
   "env": {
     "BOT_TOKEN": {
       "description": "Enter Your Bot Token Id, Generated From @Botfather",
@@ -15,7 +15,7 @@
     },
     "DB_TUR": {
       "description": "db or json",
-      "value": "db",
+      "value": "json",
       "required": false
     },
     "OWNER_ID": {
