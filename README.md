@@ -32,9 +32,9 @@ OWNER_ID="OWNER ID"
 * JSON Language File (You can edit the articles inside.)
 
 ## Commands
-```/start``` - Starts The Bot.
+* ```/start``` - Starts The Bot.
 
-```/link``` - Gives The User's Username (if any), And Also Gives The Userlink That Can Be Reached To The Person.
+* ```/link``` - Gives The User's Username (if any), And Also Gives The Userlink That Can Be Reached To The Person.
 * More Commands Available Soon... 
 
 ## Contact
