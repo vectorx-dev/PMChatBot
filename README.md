@@ -36,6 +36,3 @@ OWNER_ID="OWNER ID"
 
 * ```/link``` - Gives The User's Username (if any), And Also Gives The Userlink That Can Be Reached To The Person.
 * More Commands Available Soon... 
-
-## Contact
-[Telegram](https://t.me/Vector_Op)
