@@ -5,7 +5,7 @@
 
 A Simple Feed-Back Bot Written In PHP, Which Is Similar To The Livegram Bot.
 
-## Install
+## Installation
 ### Easy
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
