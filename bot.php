@@ -20,11 +20,11 @@ if (file_exists(__DIR__ . '/language/default.json')) {
     }', true);
 }
 
-if (empty(getenv("ADMIN_ID"))) {
-    echo "Please give admin id";
+if (empty(getenv("OWNER_ID"))) {
+    echo "Please give owner id";
     $Admin = 11111111;
 } else {
-    $Admin = getenv("ADMIN_ID");
+    $Admin = getenv("OWNER_ID");
 }
 
 if (empty(getenv("DB_TUR"))) {
