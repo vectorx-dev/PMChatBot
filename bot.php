@@ -146,6 +146,6 @@ if (empty(getenv("BOT_TOKEN"))) {
     echo "Please add token";
     die();
 } else {
-    echo "bot started successfully";
+    echo "bot started";
     $Bot->Handler(getenv("BOT_TOKEN"));
 }
