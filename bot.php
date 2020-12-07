@@ -14,9 +14,9 @@ if (file_exists(__DIR__ . '/language/default.json')) {
 } else {
     $LANG = json_decode('{
         "START": "Hi, You can message my owner with this bot. You can send any media. My owner will reply ur message ASAP!.",
-        "ERROR_REPLY": "*Please reply an message.*",
-        "ERROR_NOTFOUND": "*Message not found in database. Can't reply.*",
-        "SENDER": "*Sender:*"
+        "ERROR_REPLY": "**Please reply an message.**",
+        "ERROR_NOTFOUND": "**Sorry! Message not found in the database and infact could not able to reply.**",
+        "SENDER": "**Sender:**"
     }', true);
 }
 
