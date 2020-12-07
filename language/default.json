@@ -1,6 +1,6 @@
 {
     "START": "Hi, You Can Message My Owner Using This Bot. You Can Also Send Any Media. My Owner Will Reply You As Soon As Possible! Be Patient And Do Not Spam.",
-    "ERROR_REPLY": "*Please Reply To The Forwarded Message!*",
-    "ERROR_NOTFOUND": "*Sorry, The Message Could Not Be Found In The Database And In Fact Couldn't Reply To The User.*",
-    "SENDER": "*Sender:*"
+    "ERROR_REPLY": "**Please Reply To The Forwarded Message!**",
+    "ERROR_NOTFOUND": "**Sorry, The Message Could Not Be Found In The Database And In Fact Couldn't Reply To The User.**",
+    "SENDER": "**Sender:**"
 }
