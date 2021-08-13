@@ -412,16 +412,16 @@
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
-            "name": "quiec/boting",
+            "name": "yusufusta/boting",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Quiec/Boting.git",
+                "url": "https://github.com/yusufusta/Boting.git",
                 "reference": "f411a5d72fd265994e6d9acf87c9e512643cdea4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Quiec/Boting/zipball/f411a5d72fd265994e6d9acf87c9e512643cdea4",
+                "url": "https://api.github.com/repos/yusufusta/Boting/zipball/f411a5d72fd265994e6d9acf87c9e512643cdea4",
                 "reference": "f411a5d72fd265994e6d9acf87c9e512643cdea4",
                 "shasum": ""
             },
@@ -1007,7 +1007,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "quiec/boting": 20
+        "yusufusta/boting": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
