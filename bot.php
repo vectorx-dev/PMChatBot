@@ -13,18 +13,18 @@ if (file_exists(__DIR__ . '/language/default.json')) {
     $LANG = json_decode(file_get_contents("./language/default.json"), true);
 } else {
     $LANG = json_decode('{
-        "START": "Hi, You can message my owner with this bot. You can send any media. My owner will reply ur message ASAP!.",
-        "ERROR_REPLY": "**Please reply an message.**",
-        "ERROR_NOTFOUND": "**Sorry! Message not found in the database and infact could not able to reply.**",
-        "SENDER": "**Sender:**"
+        "START": "Merhaba! Bu botu @Fusuf\'a ulaşmak için kullanabilirsiniz. Mesaj/ses/sticker/gif/dosya/fotoğraf atabilirsiniz. Admin\'im bunu en yakın zamanda görüp cevaplıyacaktır.",
+        "ERROR_REPLY": "*Lütfen bir mesaja yanıt ver.*",
+        "ERROR_NOTFOUND": "*Mesaj veritabanında bulunamadı. Yanıt gönderemezsiniz.*",
+        "SENDER": "*Gönderen kişi:*"
     }', true);
 }
 
-if (empty(getenv("OWNER_ID"))) {
-    echo "Please give owner id";
-    $Admin = 11111111;
+if (empty(getenv("ADMIN_ID"))) {
+    echo "Please give admin id";
+    $Admin = 452321614;
 } else {
-    $Admin = getenv("OWNER_ID");
+    $Admin = getenv("ADMIN_ID");
 }
 
 if (empty(getenv("DB_TUR"))) {
