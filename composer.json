@@ -1,6 +1,6 @@
 {
     "require": {
-        "yusufusta/boting": "dev-master",
+        "yusufusta/Boting": "dev-master",
         "jajo/jsondb": "^2.1",
         "vlucas/phpdotenv": "^5.0",
         "ext-pdo": "*",
