@@ -13,18 +13,18 @@ if (file_exists(__DIR__ . '/language/default.json')) {
     $LANG = json_decode(file_get_contents("./language/default.json"), true);
 } else {
     $LANG = json_decode('{
-        "START": "Merhaba! Bu botu @Fusuf\'a ulaşmak için kullanabilirsiniz. Mesaj/ses/sticker/gif/dosya/fotoğraf atabilirsiniz. Admin\'im bunu en yakın zamanda görüp cevaplıyacaktır.",
-        "ERROR_REPLY": "*Lütfen bir mesaja yanıt ver.*",
-        "ERROR_NOTFOUND": "*Mesaj veritabanında bulunamadı. Yanıt gönderemezsiniz.*",
-        "SENDER": "*Gönderen kişi:*"
+        "START": "Hi, You can message my owner with this bot. You can send any media. My owner will reply ur message ASAP!.",
+        "ERROR_REPLY": "*Please reply an message.*",
+        "ERROR_NOTFOUND": "*Sorry! Message not found in the database and infact could not able to reply.*",
+        "SENDER": "*Sender:*"
     }', true);
 }
 
-if (empty(getenv("ADMIN_ID"))) {
-    echo "Please give admin id";
-    $Admin = 452321614;
+if (empty(getenv("OWNER_ID"))) {
+    echo "Please give owner id";
+    $Owner = 9876543210;
 } else {
-    $Admin = getenv("ADMIN_ID");
+    $Owner = getenv("OWNER_ID");
 }
 
 if (empty(getenv("DB_TUR"))) {
@@ -58,15 +58,15 @@ if (empty(getenv("DB_TUR"))) {
     }
 }
 
-foreach (glob("./commands/*.php") as $dosya) {
-    include($dosya);
+foreach (glob("./commands/*.php") as $file) {
+    include($file);
 }
 
-$Bot->on(["animation", "audio", "document", "photo", "sticker", "video", "video_note", "voice", "contact", "dice", "location", "text"], function ($Update) use ($Bot, $Admin, $db, $tur, $LANG) {
+$Bot->on(["animation", "audio", "document", "photo", "sticker", "video", "video_note", "voice", "contact", "dice", "location", "text"], function ($Update) use ($Bot, $Owner, $db, $tur, $LANG) {
     if ($Update["message"]["chat"]["type"] !== "private") {
         return;
     }
-    if ($Update["message"]["chat"]["id"] == $Admin) {
+    if ($Update["message"]["chat"]["id"] == $Owner) {
         if(empty($Update["message"]["reply_to_message"])) {
             $Bot->sendMessage(["chat_id" => $Update["message"]["chat"]["id"], "reply_to_message_id" => $Update["message"]["message_id"], "parse_mode" => "markdown", "text" => $LANG["ERROR_REPLY"]]); 
             return;
@@ -126,9 +126,9 @@ $Bot->on(["animation", "audio", "document", "photo", "sticker", "video", "video_
             } 
         } 
     } else {
-        $id = $Bot->forwardMessage(["chat_id" => $Admin, "from_chat_id" => $Update["message"]["chat"]["id"], "message_id" => $Update["message"]["message_id"]])["result"]["message_id"];
+        $id = $Bot->forwardMessage(["chat_id" => $Owner, "from_chat_id" => $Update["message"]["chat"]["id"], "message_id" => $Update["message"]["message_id"]])["result"]["message_id"];
         if (!empty($Update["message"]["sticker"])) {
-            $Bot->sendMessage(["chat_id" => $Admin, "parse_mode" => "markdown", "reply_to_message_id" => $id, "text" => $LANG["sender"] . " [" . $Update["message"]["from"]["first_name"] . "](tg://user?id=" . $Update["message"]["chat"]["id"] . ")"]); 
+            $Bot->sendMessage(["chat_id" => $Owner, "parse_mode" => "markdown", "reply_to_message_id" => $id, "text" => $LANG["sender"] . " [" . $Update["message"]["from"]["first_name"] . "](tg://user?id=" . $Update["message"]["chat"]["id"] . ")"]); 
         }
         if (!empty($Update["message"]["from"]["username"])) {
             $username = $Update["message"]["from"]["username"];
