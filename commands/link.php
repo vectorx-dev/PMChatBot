@@ -4,7 +4,7 @@ $Bot->command("/\/link/", function ($Update, $Match) use ($Bot, $db, $tur, $LANG
     if (empty($Update["message"]["reply_to_message"]["message_id"])) {
         $Bot->sendMessage(["chat_id" => $Update["message"]["chat"]["id"], "parse_mode" => "markdown", "text" => $LANG["ERROR_REPLY"]]);   
     }
-    $MId = $Update["message"]["reply_to_message"]["message_id"];
+    $MId = $Update["message"]["reply_to_message_id"]["message_id"];
     if ($tur == 0) {
         $fid = $db->select('fid, fmid, fname, fusername')
         ->from('msg.json')
